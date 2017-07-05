@@ -8,7 +8,6 @@ const Recommend = import('view/recommend')
 const Hot = import('view/hot')
 const Search = import('view/search')
 
-
 Vue.use(Router)
 
 export default new Router({
@@ -17,9 +16,10 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      redirect: '/recommend',
       children: [
-        {path: 'hot', name: 'hot', component: Hot},
         {path: 'recommend', name: 'recommend', component: Recommend},
+        {path: 'hot', name: 'hot', component: Hot},
         {path: 'search', name: 'search', component: Search}
       ]
     },
