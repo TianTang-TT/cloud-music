@@ -20,7 +20,7 @@
     }
   }
 </script>
-<style rel="stylesheet/less" lang="less" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .header {
     position: relative;
     .header-top {

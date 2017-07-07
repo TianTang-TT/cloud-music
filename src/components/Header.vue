@@ -9,7 +9,7 @@
     name: 'header'
   }
 </script>
-<style rel="stylesheet/less" lang="less" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .header {
     position: fixed;
     top: 0;
@@ -33,7 +33,6 @@
       height: 0.8rem;
       line-height: 0.8rem;
       text-align: center;
-      .findpx(font-size, 30px);
     }
   }
 </style>

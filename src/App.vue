@@ -9,6 +9,6 @@ export default {
   name: 'app'
 }
 </script>
-<style rel="stylesheet/less" lang="less">
-  @import "~assets/less/mixin";
+<style rel="stylesheet/scss" lang="scss">
+  @import "~assets/scss/mixin";
 </style>
