@@ -5,8 +5,8 @@ import Home from 'view/Home'
 import Music from 'view/Music'
 import Recommend from 'view/recommend'
 
-const Hot = import('view/hot')
-const Search = import('view/search')
+const Hot = () => import('view/hot')
+const Search = () => import('view/search')
 
 Vue.use(Router)
 
