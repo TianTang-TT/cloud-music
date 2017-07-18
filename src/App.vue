@@ -10,5 +10,5 @@ export default {
 }
 </script>
 <style rel="stylesheet/scss" lang="scss">
-  @import "~assets/scss/mixin";
+  @import "~assets/scss/index";
 </style>

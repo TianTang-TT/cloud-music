@@ -22,6 +22,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      'static': resolve('static'),
       '@': resolve('src'),
       'api': resolve('src/api'),
       'assets': resolve('src/assets'),
@@ -70,5 +71,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  //注入全局mixin
+  //sassResources: path.join(__dirname, '../src/assets/scss/mixin.scss'),
+  //sassLoader: {
+    //data:  path.join(__dirname, '../src/assets/scss/index.scss')
+  //}
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <cm-header></cm-header>
-    <ul class="header-tab">
+    <ul class="main-tabs">
       <li class="tab"><router-link to="/recommend" class="tab-link">推荐音乐</router-link></li>
       <li class="tab"><router-link to="/hot" class="tab-link">热歌榜</router-link></li>
       <li class="tab"><router-link to="/search" class="tab-link">搜索</router-link></li>
@@ -21,10 +21,28 @@
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
-  .header {
-    position: relative;
-    .header-top {
-      height: 1.706667rem;
+  .home {
+    overflow: hidden;
+    padding-top: 1.706667rem;
+    .main-tabs {
+      display: flex;
+      border-bottom: 1px solid #dfdfdf;
+      .tab {
+        flex: 1;
+        height: 1.066667rem;
+        line-height: 1.066667rem;
+        text-align: center;
+        a {
+          color: #333;
+          font-size: 0.4rem;
+          display: inline-block;
+          height: 100%;
+          &.router-link-active {
+            color: #d33a31;
+            border-bottom: 0.053333rem solid #d33a31;
+          }
+        }
+      }
     }
   }
 </style>
