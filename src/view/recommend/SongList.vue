@@ -1,17 +1,23 @@
 <template>
   <div class="song-list">
       <div class="img-wrap">
-        <img alt="" class="list-avatar">
-        <span class="subscriber">115万</span>
+        <img :src="list.picUrl" class="list-avatar">
+        <span class="subscriber">{{ list.playCount }}</span>
       </div>
       <p class="list-desc">
-        「华语情歌」想得却不可得，你奈人生何呵呵
+        {{ list.name }}
       </p>
   </div>
 </template>
 <script>
   export default {
-    name: 'song-list'
+    name: 'song-list',
+    props: {
+      list: {
+        required: true,
+        type: Object
+      }
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
@@ -24,7 +30,6 @@
       padding-bottom: 100%;
       font-size: 0;
       .list-avatar {
-        border: 1px solid #dfdfdf;
         width: 100%;
         position: absolute;
         top: 0;
@@ -47,6 +52,7 @@
       line-height: 1.2;
       font-size: 0.346667rem;
       overflow: hidden;
+      text-overflow: ellipsis;
       padding: 0.16rem 0.053333rem 0 0.16rem;
     }
   }
