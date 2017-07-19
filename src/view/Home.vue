@@ -6,9 +6,11 @@
       <li class="tab"><router-link to="/hot" class="tab-link">热歌榜</router-link></li>
       <li class="tab"><router-link to="/search" class="tab-link">搜索</router-link></li>
     </ul>
-    <router-view>
+    <div class="main-content">
+      <router-view>
 
-    </router-view>
+      </router-view>
+    </div> 
   </div>
 </template>
 <script>
