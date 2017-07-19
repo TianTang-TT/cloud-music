@@ -39,6 +39,7 @@
           font-size: 0.4rem;
           display: inline-block;
           height: 100%;
+          padding: 0 0.133333rem;
           &.router-link-active {
             color: #d33a31;
             border-bottom: 0.053333rem solid #d33a31;

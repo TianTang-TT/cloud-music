@@ -4,11 +4,13 @@
     <section class="song-lists">
       <song-list :list="list" v-for="list of songList" key></song-list>
     </section>
+    <section-title title="最新音乐"></section-title>
   </div>
 </template>
 <script>
   import SectionTitle from './SectionTitle.vue'
   import SongList from './SongList.vue'
+  import { newsong } from 'api/recommend'
 
   export default {
     name: 'recommend',
@@ -90,11 +92,14 @@
     },
     methods: {
       searchSongList () {
-
+        newsong().then(res => {
+          console.log('.....')
+          console.log(res)
+        })
       }
     },
     mounted () {
-
+      this.searchSongList()
     }
   }
 </script>
