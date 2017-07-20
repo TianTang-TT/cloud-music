@@ -7,7 +7,6 @@ const service = axios.create({
 
 // 拦截氢请求
 service.interceptors.request.use(config => {
-  config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
   return config
 })
 
