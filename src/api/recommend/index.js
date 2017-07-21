@@ -6,3 +6,10 @@ export function newsong () {
     method: 'get'
   })
 }
+
+export function recommendList () {
+  return fetch({
+    url: 'recommendList',
+    method: 'get'
+  })
+}
