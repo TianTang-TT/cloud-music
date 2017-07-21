@@ -3,5 +3,5 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  BASE_URL: '"/mock/59707546a1d30433d838c880/music"'
+  BASE_URL: '"/mock/597174f9a1d30433d83953f8/music"'
 })

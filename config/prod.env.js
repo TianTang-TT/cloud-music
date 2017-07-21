@@ -1,4 +1,4 @@
 module.exports = {
   NODE_ENV: '"production"',
-  BASE_URL: '"/mock/59707546a1d30433d838c880/music"'
+  BASE_URL: '"/mock/597174f9a1d30433d83953f8/music"'
 }
