@@ -7,9 +7,9 @@
       <li class="tab"><router-link to="/search" class="tab-link">搜索</router-link></li>
     </ul>
     <div class="main-content">
-      <router-view>
-
-      </router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>   
     </div> 
   </div>
 </template>

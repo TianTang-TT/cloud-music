@@ -25,6 +25,7 @@
     display: inline-block;
     width: 33.33%;
     padding-bottom: 0.426667rem;
+    vertical-align: top;
     .img-wrap {
       position: relative;
       padding-bottom: 100%;
