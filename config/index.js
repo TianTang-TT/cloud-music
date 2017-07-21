@@ -29,11 +29,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/mock': {
-            target: 'https://easy-mock.com/mock/59707546a1d30433d838c880/music/',
-            changeOrigin: true,
-            pathRewrite: {
-                '^/mock': '/mock/59707546a1d30433d838c880/music/'
-            }
+            target: 'https://easy-mock.com',
+            changeOrigin: true
         }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
