@@ -25,10 +25,16 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
   .home {
     overflow: hidden;
-    padding-top: 1.706667rem;
+    padding-top: 2.773333rem;
     .main-tabs {
+      width: 100%;
       display: flex;
       border-bottom: 1px solid #dfdfdf;
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      top: 1.706667rem;
+      z-index: 3;
       .tab {
         flex: 1;
         height: 1.066667rem;

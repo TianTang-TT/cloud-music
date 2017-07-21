@@ -8,7 +8,7 @@
     </section>
     <section-title title="最新音乐"></section-title>
     <div class="songs">
-      <song v-for="song in 3"></song>
+      <song v-for="song in newSongs" :songData="song" key></song>
     </div>
   </div>
 </template>
@@ -24,7 +24,8 @@
     },
     data () {
       return {
-        recommendListData: []
+        recommendListData: [],
+        newSongs: []
       }
     },
     methods: {
@@ -37,7 +38,7 @@
       },
       searchSongList () {
         newsong().then(res => {
-          console.log(res)
+          this.newSongs = res.data.result
         })
       }
     },

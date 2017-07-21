@@ -2,8 +2,8 @@
   <a class="song-wrapper">
     <div class="song">
       <div class="message">
-        <p class="song-name">单身情歌</p>
-        <p class="song-detail">xinxi</p>
+        <p class="song-name">{{ songData.name }}</p>
+        <p class="song-detail">{{ songData.song.artists[0].name }}</p>
       </div>
       <div class="play">
         <span class="play-key"></span>
@@ -13,7 +13,13 @@
 </template>
 <script>
   export default {
-    name: 'song'
+    name: 'song',
+    props: {
+      songData: {
+        required: true,
+        type: Object
+      }
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>

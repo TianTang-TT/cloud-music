@@ -14,6 +14,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 3;
     width:100%;
     height: 1.706667rem;
     background-color: #d43c33;
