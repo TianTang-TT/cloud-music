@@ -7,9 +7,6 @@
     clear: both;
   }
 }
-@mixin color {
-    color: red;
-}
 /* @mixin fontpx($px){
     font-size: round(@px / 2) * 1px;
     [data-dpr="2"] & {
