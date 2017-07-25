@@ -20,6 +20,14 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  var scssResourceLoader = {
+    loader: 'sass-resources-loader',
+    options: {
+      // Provide path to the file with resources
+      resources: path.resolve(__dirname, '../src/assets/scss/mixin.scss')
+    }
+  }
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader]
@@ -31,6 +39,8 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+
+    loaders.push(scssResourceLoader);
 
     // Extract CSS when that option is specified
     // (which is the case during production build)
