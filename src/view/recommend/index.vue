@@ -10,17 +10,21 @@
     <div class="songs">
       <song v-for="song of newSongs" :songData="song" key></song>
     </div>
+    <cm-footer></cm-footer>
   </div>
 </template>
 <script>
   import SectionTitle from './SectionTitle.vue'
   import SongList from './SongList.vue'
+  import CMFooter from './Footer.vue'
   import { newsong, recommendList } from 'api/recommend'
 
   export default {
     name: 'recommend',
     components: {
-      SectionTitle, SongList
+      SectionTitle,
+      SongList,
+      'cm-footer': CMFooter
     },
     data () {
       return {

@@ -24,7 +24,6 @@
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
   .home {
-    @include color;
     overflow: hidden;
     padding-top: 2.773333rem;
     .main-tabs {
