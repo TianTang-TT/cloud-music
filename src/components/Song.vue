@@ -1,6 +1,6 @@
 <template>
   <a class="song-wrapper">
-    <span class="song-index">{{ index + 1}}</span>
+    <span class="song-index" v-if="hasIndex">{{ index + 1}}</span>
     <div class="song">
       <div class="message">
         <p class="song-name">{{ songData.name }}</p>
