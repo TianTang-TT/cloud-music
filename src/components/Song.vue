@@ -1,10 +1,10 @@
 <template>
   <a class="song-wrapper">
-    <span class="song-index" v-if="hasIndex">{{ index + 1}}</span>
+    <span class="song-index" v-if="type=='hot'">{{ index + 1}}</span>
     <div class="song">
       <div class="message">
         <p class="song-name">{{ songData.name }}</p>
-        <p class="song-detail" v-if="hasIndex">{{ songData.ar[0].name }}</p>
+        <p class="song-detail" v-if="type=='hot'||type=='search'">{{ songData.ar[0].name }}</p>
         <p class="song-detail" v-else>{{ songData.song.artists[0].name }}</p>
       </div>
       <div class="play">
@@ -21,11 +21,8 @@
         required: true,
         type: Object
       },
-      hasIndex: {
-        type: Boolean,
-        default () {
-          return false
-        }
+      type: {
+        String
       },
       index: String
     }

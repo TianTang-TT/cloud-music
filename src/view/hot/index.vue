@@ -2,7 +2,7 @@
   <div class="hot-section">
     <hot-band></hot-band>
     <div class="songs">
-      <song v-for="(song, index) of hotSongs.tracks" :songData="song" key :hasIndex="true" :index="index"></song>
+      <song v-for="(song, index) of hotSongs.tracks" :songData="song" key type="hot" :index="index"></song>
     </div>
   </div>
 </template>

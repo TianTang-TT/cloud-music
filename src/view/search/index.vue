@@ -10,28 +10,47 @@
         placeholder="搜索歌手，歌曲，专辑">
       </div>
     </section>
-    <section class="hot-search">
+    <section class="hot-search" v-if="searchResult.length==0">
       <h3 class="title">热门搜索</h3>
       <ul class="search-list">
-        <li class="item" v-for="hot of hots" :value="hot.second">{{ hot.first }}</li>
+        <li 
+          class="item" 
+          @click="handleKeySearch(hot)"
+          v-for="hot of hots" 
+          :value="hot.second">
+            {{ hot.first }}
+        </li>
       </ul>
     </section>
+    <div class="songs">
+      <song v-for="(song, index) of searchResult" :songData="song" key type='search'></song>
+    </div>
   </div>
 </template>
 <script>
-  import { getHotKeys } from 'api/search'
+  import { getHotKeys, searchSongs } from 'api/search'
 
   export default {
     name: 'search',
     data () {
       return {
         keyword: '',
-        hots: []
+        hots: [],
+        searchResult: []
       }
     },
     methods: {
       searchKeyword () {
-        alert(this.keyword)
+        if (!this.keyword) return
+        searchSongs(this.keyword).then(res => {
+          if (res.status === 200) {
+            this.searchResult = res.data.result.songs
+          }
+        })
+      },
+      handleKeySearch (hot) {
+        this.keyword = hot.first
+        this.searchKeyword()
       }
     },
     mounted () {

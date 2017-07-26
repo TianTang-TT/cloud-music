@@ -1,9 +1,12 @@
 import fetch from 'api/fetch'
 
-export function searchSongs () {
+export function searchSongs (keyword) {
   return fetch({
     url: '/search',
-    method: 'get'
+    method: 'get',
+    params: {
+      keyword
+    }
   })
 }
 

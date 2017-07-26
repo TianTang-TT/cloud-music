@@ -8,7 +8,7 @@
     </section>
     <section-title title="最新音乐"></section-title>
     <div class="songs">
-      <song v-for="song of newSongs" :songData="song" key></song>
+      <song v-for="song of newSongs" :songData="song" key type="recommend"></song>
     </div>
     <cm-footer></cm-footer>
   </div>
