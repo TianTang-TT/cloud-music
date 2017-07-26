@@ -6,3 +6,10 @@ export function searchSongs () {
     method: 'get'
   })
 }
+
+export function getHotKeys () {
+  return fetch({
+    url: '/hots',
+    method: 'get'
+  })
+}
