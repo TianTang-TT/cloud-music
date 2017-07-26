@@ -1,10 +1,15 @@
 <template>
   <div class="hot-section">
-    <p>this is hot</p>
+    <hot-band></hot-band>
   </div>
 </template>
 <script>
+  import HotBand from './HotBand.vue'
+
   export default {
-    name: 'hot'
+    name: 'hot',
+    components: {
+      HotBand
+    }
   }
 </script>
