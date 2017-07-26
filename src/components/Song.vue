@@ -1,6 +1,6 @@
 <template>
   <a class="song-wrapper">
-    <span class="song-index">01</span>
+    <span class="song-index">{{ index + 1}}</span>
     <div class="song">
       <div class="message">
         <p class="song-name">{{ songData.name }}</p>
@@ -26,7 +26,8 @@
         default () {
           return false
         }
-      }
+      },
+      index: String
     }
   }
 </script>
