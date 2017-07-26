@@ -39,6 +39,11 @@
         searchResult: []
       }
     },
+    watch: {
+      keyword (val) {
+        if (!val) this.searchResult = []
+      }
+    },
     methods: {
       searchKeyword () {
         if (!this.keyword) return
