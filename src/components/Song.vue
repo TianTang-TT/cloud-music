@@ -1,9 +1,11 @@
 <template>
   <a class="song-wrapper">
+    <span class="song-index">01</span>
     <div class="song">
       <div class="message">
         <p class="song-name">{{ songData.name }}</p>
-        <p class="song-detail">{{ songData.song.artists[0].name }}</p>
+        <p class="song-detail" v-if="hasIndex">{{ songData.ar[0].name }}</p>
+        <p class="song-detail" v-else>{{ songData.song.artists[0].name }}</p>
       </div>
       <div class="play">
         <span class="play-key"></span>
@@ -18,6 +20,12 @@
       songData: {
         required: true,
         type: Object
+      },
+      hasIndex: {
+        type: Boolean,
+        default () {
+          return false
+        }
       }
     }
   }
@@ -26,6 +34,14 @@
   .song-wrapper {
     display: flex;
     padding-left: 0.266667rem;
+    .song-index {
+      color: #df3436;
+      width: 0.746667rem;
+      display: flex;
+      justify: center;
+      align-items: center;
+      font-size: 0.453333rem;
+    }
     .song {
       flex: 1;
       padding: 0.32rem 0;
