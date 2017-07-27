@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <transition class="fade">
+  <div id="app" :style="{height: appHeight + 'px'}">
+    <transition 
+      :enter-active-class="'animated ' + (forward ? 'slideInRight' : 'slideInLeft')"
+      :leave-active-class="'animated ' + (forward ? 'slideOutLeft' : 'slideOutRight')">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -10,9 +12,21 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      appHeight: '',
+      forward: true
+    }
+  },
+  created () {
+    this.appHeight = window.innerHeight
+  }
 }
 </script>
 <style rel="stylesheet/scss" lang="scss">
   @import "~assets/scss/index";
+  #app {
+    position: relative;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <a class="song-wrapper">
+  <a class="song-wrapper" @click="playSong">
     <span class="song-index" v-if="type=='hot'">{{ index + 1}}</span>
     <div class="song">
       <div class="message">
@@ -25,6 +25,11 @@
         String
       },
       index: [String, Number]
+    },
+    methods: {
+      playSong () {
+        this.$router.push({path: '/music'})
+      }
     }
   }
 </script>

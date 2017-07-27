@@ -10,7 +10,7 @@
       <transition 
         enter-active-class="animated slideInRight"
         leave-active-class="animated slideOutLeft"
-        class="fade">
+        >
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -23,8 +23,12 @@
   export default {
     name: 'home',
     components: {
-      CmHeader: Header,
-      contentHeight: ''
+      CmHeader: Header
+    },
+    data () {
+      return {
+        contentHeight: ''
+      }
     },
     mounted () {
       this.contentHeight = window.innerHeight - 208
@@ -33,6 +37,10 @@
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
   .home {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     overflow: hidden;
     padding-top: 2.773333rem;
     .main-tabs {
