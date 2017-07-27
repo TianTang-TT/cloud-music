@@ -5,6 +5,7 @@ import store from './store'
 import Song from 'components/Song'
 
 import 'static/css/reset.css'
+import 'static/css/animate.min.css'
 
 Vue.component('song', Song)
 Vue.config.productionTip = false

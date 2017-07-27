@@ -24,7 +24,7 @@
       type: {
         String
       },
-      index: String
+      index: [String, Number]
     }
   }
 </script>

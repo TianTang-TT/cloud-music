@@ -55,5 +55,10 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
   .recommend-section {
     padding-top: 0.533333rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
   }
 </style>

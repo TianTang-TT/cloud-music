@@ -35,3 +35,12 @@
     }
   }
 </script>
+<style rel="stylesheet/scss" lang="scss" scoped>
+  .hot-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+</style>

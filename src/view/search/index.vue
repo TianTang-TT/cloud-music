@@ -69,6 +69,11 @@
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
   .search-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     .search-bar {
       border-bottom: 1px solid #dfdfdf;
       padding: 0.4rem 0.266667rem;

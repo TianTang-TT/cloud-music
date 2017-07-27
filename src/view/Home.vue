@@ -6,10 +6,15 @@
       <li class="tab"><router-link to="/hot" class="tab-link">热歌榜</router-link></li>
       <li class="tab"><router-link to="/search" class="tab-link">搜索</router-link></li>
     </ul>
-    <div class="main-content">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>   
+    <div class="main-content" id="main-content" :style="{height: contentHeight + 'px'}">
+      <transition 
+        enter-active-class="animated slideInRight"
+        leave-active-class="animated slideOutLeft"
+        class="fade">
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </transition>  
     </div> 
   </div>
 </template>
@@ -18,7 +23,11 @@
   export default {
     name: 'home',
     components: {
-      CmHeader: Header
+      CmHeader: Header,
+      contentHeight: ''
+    },
+    mounted () {
+      this.contentHeight = window.innerHeight - 208
     }
   }
 </script>
@@ -52,6 +61,9 @@
           }
         }
       }
+    }
+    .main-content {
+      position: relative;
     }
   }
 </style>
