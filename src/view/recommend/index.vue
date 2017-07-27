@@ -60,5 +60,7 @@
     top: 0;
     z-index: 1;
     width: 100%;
+    height: 1200px;
+    overflow: auto;
   }
 </style>

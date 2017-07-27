@@ -21,7 +21,6 @@ export default {
   },
   watch: {
     $route (to, from) {
-      console.log(to)
       if (to.name === 'music') {
         this.forward = true
       } else {
