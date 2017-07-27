@@ -19,6 +19,16 @@ export default {
       forward: true
     }
   },
+  watch: {
+    $route (to, from) {
+      console.log(to)
+      if (to.name === 'music') {
+        this.forward = true
+      } else {
+        this.forward = false
+      }
+    }
+  },
   created () {
     this.appHeight = window.innerHeight
   }
