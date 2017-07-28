@@ -76,6 +76,7 @@
     width: 100%;
     height: 1200px;
     overflow: auto;
+    animation-duration: .3s;
     .search-bar {
       border-bottom: 1px solid #dfdfdf;
       padding: 0.4rem 0.266667rem;
