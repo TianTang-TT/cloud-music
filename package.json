@@ -1,7 +1,7 @@
 {
   "name": "cloud-music",
   "version": "1.0.0",
-  "description": "vue2.x + vuex + vue-router + axios + flexible + less 仿网易云音乐webapp",
+  "description": "vue2.x + vuex + vue-router + axios + flexible + scss 仿网易云音乐webapp",
   "author": "honor <honor_loyalty@126.com>",
   "private": true,
   "scripts": {

@@ -1,6 +1,6 @@
 # cloud-music
 
-> vue2.x + vuex + vue-router + axios + flexible + less 仿网易云音乐webapp
+> vue2.x + vuex + vue-router + axios + flexible + scss 仿网易云音乐webapp
 
 ## Build Setup
 
