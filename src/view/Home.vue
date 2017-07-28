@@ -8,9 +8,8 @@
     </ul>
     <div class="main-content" id="main-content" :style="{height: contentHeight + 'px'}">
       <transition 
-        enter-active-class="animated slideInRight"
-        leave-active-class="animated slideOutLeft"
-        >
+        :enter-active-class="'animated ' + (forward ? 'slideInRight' : 'slideInLeft')"
+        :leave-active-class="'animated ' + (forward ? 'slideOutLeft' : 'slideOutRight')">
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -27,7 +26,15 @@
     },
     data () {
       return {
+        forward: true,
         contentHeight: ''
+      }
+    },
+    watch: {
+      $route (to, from) {
+        if (to.meta.cat === 'home' && from.meta.cat === 'home') {
+          this.forward = (to.meta.index > from.meta.index)
+        }
       }
     },
     mounted () {

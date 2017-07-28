@@ -18,9 +18,9 @@ export default new Router({
       component: Home,
       redirect: '/recommend',
       children: [
-        {path: 'recommend', name: '推荐音乐', component: Recommend},
-        {path: 'hot', name: '热歌榜', component: Hot},
-        {path: 'search', name: '搜索', component: Search}
+        {path: 'recommend', name: '推荐音乐', component: Recommend, meta: {index: 1, cat: 'home'}},
+        {path: 'hot', name: '热歌榜', component: Hot, meta: {index: 2, cat: 'home'}},
+        {path: 'search', name: '搜索', component: Search, meta: {index: 3, cat: 'home'}}
       ]
     },
     {
