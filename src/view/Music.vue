@@ -1,6 +1,5 @@
 <template>
   <div class="music">
-    <p>thsi is music page</p>
     <button class="back" @click="backToUpper">返回</button>
   </div>
 </template>
