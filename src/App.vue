@@ -1,6 +1,6 @@
 <template>
   <div id="app" :style="{height: appHeight + 'px'}">
-    <transition 
+    <transition
       :enter-active-class="'animated ' + (forward ? 'slideInRight' : 'slideInLeft')"
       :leave-active-class="'animated ' + (forward ? 'slideOutLeft' : 'slideOutRight')">
       <keep-alive>
@@ -27,15 +27,16 @@ export default {
         this.forward = false
       }
     }
-  },
-  created () {
-    this.appHeight = window.innerHeight
   }
 }
 </script>
 <style rel="stylesheet/scss" lang="scss">
   @import "~assets/scss/index";
   #app {
-    position: relative;
+    position: fixed;
+    top: 0;
+    botton: 0;
+    left: 0;
+    right: 0;
   }
 </style>
