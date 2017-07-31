@@ -21,7 +21,7 @@ export default {
   },
   watch: {
     $route (to, from) {
-      if (to.name === 'music') {
+      if (to.name === 'play') {
         this.forward = true
       } else {
         this.forward = false

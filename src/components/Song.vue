@@ -28,7 +28,7 @@
     },
     methods: {
       playSong () {
-        this.$router.push({path: '/music'})
+        this.$router.push({path: '/play'})
       }
     }
   }

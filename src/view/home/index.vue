@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <cm-header></cm-header>
+    <header :is="header"></header>
     <ul class="main-tabs">
       <li class="tab"><router-link to="/recommend" class="tab-link">推荐音乐</router-link></li>
       <li class="tab"><router-link to="/hot" class="tab-link">热歌榜</router-link></li>
@@ -18,14 +18,12 @@
   </div>
 </template>
 <script>
-  import Header from 'components/Header'
+  import Header from './Header'
   export default {
     name: 'home',
-    components: {
-      CmHeader: Header
-    },
     data () {
       return {
+        header: Header,
         forward: true,
         contentHeight: ''
       }

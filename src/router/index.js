@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from 'view/Home'
-import Music from 'view/Music'
-import Recommend from 'view/recommend'
+import Home from 'view/home'
+import Play from 'view/play'
+import Recommend from 'view/home/recommend'
 
-const Hot = () => import('view/hot')
-const Search = () => import('view/search')
+const Hot = () => import('view/home/hot')
+const Search = () => import('view/home/search')
 
 Vue.use(Router)
 
@@ -24,9 +24,9 @@ export default new Router({
       ]
     },
     {
-      path: '/music',
-      name: 'music',
-      component: Music
+      path: '/play',
+      name: 'play',
+      component: Play
     }
   ]
 })
