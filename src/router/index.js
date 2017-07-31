@@ -3,8 +3,8 @@ import Router from 'vue-router'
 
 import Home from 'view/home'
 import Play from 'view/play'
-import Recommend from 'view/home/recommend'
 
+import Recommend from 'view/home/recommend'
 const Hot = () => import('view/home/hot')
 const Search = () => import('view/home/search')
 
@@ -18,9 +18,9 @@ export default new Router({
       component: Home,
       redirect: '/recommend',
       children: [
-        {path: 'recommend', name: '推荐音乐', component: Recommend, meta: {index: 1, cat: 'home'}},
-        {path: 'hot', name: '热歌榜', component: Hot, meta: {index: 2, cat: 'home'}},
-        {path: 'search', name: '搜索', component: Search, meta: {index: 3, cat: 'home'}}
+        {path: 'recommend', name: 'recommend', component: Recommend, meta: {name: '推荐音乐', index: 1, cat: 'home'}},
+        {path: 'hot', name: 'hot', component: Hot, meta: {name: '热歌榜', index: 2, cat: 'home'}},
+        {path: 'search', name: 'search', component: Search, meta: {name: '搜索', index: 3, cat: 'home'}}
       ]
     },
     {

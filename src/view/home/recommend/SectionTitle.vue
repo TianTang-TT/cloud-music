@@ -18,7 +18,7 @@
   .section-title {
     height: 0.533333rem;
     line-height: 0.533333rem;
-    font-size: 0.453333rem;
+    @include fontpx(34);
     padding-left: 0.24rem;
     margin-bottom: 0.373333rem;
     position: relative;

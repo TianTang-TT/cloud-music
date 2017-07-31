@@ -61,8 +61,8 @@
         line-height: 1.066667rem;
         text-align: center;
         a {
+          @include fontpx(30);
           color: #333;
-          font-size: 0.4rem;
           display: inline-block;
           height: 100%;
           padding: 0 0.133333rem;

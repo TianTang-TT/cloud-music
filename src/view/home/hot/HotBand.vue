@@ -32,14 +32,14 @@
       z-index: 1;
       color: #fff;
       .title {
-        font-size: 0.426667rem;
+        @include fontpx(32);
       }
       .hot-logo {
-        font-size: 1.066667rem;
+        @include fontpx(80);
         margin: 0.266667rem 0;
       }
       .update {
-        font-size: 0.426667rem;
+        @include fontpx(32);
       }
     }
   }

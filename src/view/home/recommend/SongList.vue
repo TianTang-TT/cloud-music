@@ -43,7 +43,7 @@
         right: 0.133333rem;
         z-index: 2;
         color: #fff;
-        font-size: 0.373333rem;
+        @include fontpx(28);
       }
     }
     .list-desc {
@@ -51,7 +51,7 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       line-height: 1.2;
-      font-size: 0.346667rem;
+      @include fontpx(26);
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 0.16rem 0.053333rem 0 0.16rem;

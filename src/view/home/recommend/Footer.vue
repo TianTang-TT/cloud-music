@@ -31,19 +31,19 @@
         line-height: 1.173333rem;
         padding-top: 17%;
         text-align: center;
-        font-size: 0.666667rem;
+        @include fontpx(50);
       }
       .app-button {
+        @include fontpx(32);
         line-height: 1.013333rem;
         border: 2px solid #d33a31;
-        border-radius: 1.013333rem;
-        font-size: 0.426667rem;
+        border-radius: 1.013333rem;     
         color: #d33a31;
         margin: 0.4rem 0.986667rem 0.133333rem;
       }
       .desc {
         color: #888;
-        font-size: 0.32rem;
+        @include fontpx(24);
         line-height: 0.426667rem;
         -webkit-transform: scale(.75);
         transform: scale(.75);

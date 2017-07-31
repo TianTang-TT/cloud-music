@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name: 'music',
+    name: 'play',
     methods: {
       backToUpper () {
         this.$router.go(-1)

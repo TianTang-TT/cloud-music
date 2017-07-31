@@ -43,7 +43,7 @@
       display: flex;
       justify: center;
       align-items: center;
-      font-size: 0.453333rem;
+      @include fontpx(34);
     }
     .song {
       flex: 1;
@@ -55,7 +55,7 @@
         .song-name {
           height: 0.666667rem;
           line-height: 0.666667rem;
-          font-size: 0.453333rem;
+          @include fontpx(34);
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -63,8 +63,8 @@
         .song-detail {
           height: 0.48rem;
           line-height: 0.48rem;
-          font-size: 0.32rem;
           color: #888;
+          @include fontpx(24);
         }
       }
       .play {
