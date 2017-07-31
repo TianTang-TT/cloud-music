@@ -6,7 +6,7 @@
       <li class="tab"><router-link to="/hot" class="tab-link">热歌榜</router-link></li>
       <li class="tab"><router-link to="/search" class="tab-link">搜索</router-link></li>
     </ul>
-    <div class="main-content" id="main-content" :style="{height: contentHeight + 'px'}">
+    <div class="main-content" id="main-content">
       <transition 
         :enter-active-class="'animated ' + (forward ? 'slideInRight' : 'slideInLeft')"
         :leave-active-class="'animated ' + (forward ? 'slideOutLeft' : 'slideOutRight')">
@@ -36,9 +36,6 @@
           this.forward = (to.meta.index > from.meta.index)
         }
       }
-    },
-    mounted () {
-      this.contentHeight = window.innerHeight - 208
     }
   }
 </script>
@@ -48,6 +45,7 @@
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     overflow: hidden;
     padding-top: 2.773333rem;
     .main-tabs {
@@ -78,7 +76,11 @@
       }
     }
     .main-content {
-      position: relative;
+      position: absolute;
+      top: 2.773333rem;
+      bottom: 0;
+      width: 100%;
+      overflow: auto;
     }
   }
 </style>
