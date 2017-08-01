@@ -2,7 +2,7 @@ import Home from 'view/home'
 import Play from 'view/play'
 
 import Welcome from 'view/Welcome'
-import Recommend from 'view/home/recommend'
+const Recommend = () => import('view/home/recommend')
 const Hot = () => import('view/home/hot')
 const Search = () => import('view/home/search')
 
