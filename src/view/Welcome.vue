@@ -5,7 +5,12 @@
 </template>
 <script>
   export default {
-    name: 'welcome'
+    name: 'welcome',
+    mounted () {
+      setTimeout(() => {
+        this.$router.replace({path: '/'})
+      }, 1000)
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>

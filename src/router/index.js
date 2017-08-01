@@ -8,4 +8,14 @@ const router = new Router({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  let token = sessionStorage.getItem('token')
+  if (!token) {
+    sessionStorage.setItem('token', Date.now())
+    next({path: '/welcome'})
+  } else {
+    next()
+  }
+})
+
 export default router
