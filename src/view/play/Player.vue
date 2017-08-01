@@ -1,7 +1,7 @@
 <template>
   <div class="player-container">
     <div class="player">
-      <div class="player-disc">
+      <div class="player-disc" @click="playMusic" id="palyerDisc">
         <div class="song">
           <img src="~assets/imgs/song-img.webp" alt="" class="song-img">
         </div>
@@ -11,10 +11,22 @@
 </template>
 <script>
   export default {
-    name: 'player'
+    name: 'player',
+    methods: {
+      playMusic (e) {
+        document.querySelector('#palyerDisc').classList.toggle('playing')
+      }
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
+  @keyframes circling {
+    0% { transform: rotate(0deg) }
+    25%{ transform: rotate(90deg) }
+    50%{ transform: rotate(180deg) }
+    75%{ transform: rotate(270deg) }
+    100%{ transform: rotate(360deg) }
+  }
   .player-container {
     padding-top: 2.133333rem;
     .player {
@@ -35,6 +47,16 @@
         width: 100%;
         height: 100%;
         position: relative;
+        &.playing {
+          &:before {
+            animation: none;
+          }
+          .song {
+            .song-img {
+              animation: none;
+            }
+          }
+        }
         &:before {
           content: '';
           position: absolute;
@@ -44,6 +66,7 @@
           left: 0;
           background: url('~assets/imgs/disc-plus.png') no-repeat;
           background-size: contain;
+          animation: circling 20s infinite linear; 
         }
         .song {
           width: 4.906667rem;
@@ -57,6 +80,7 @@
           .song-img {
             width: 100%;
             height: 100%;
+            animation: circling 20s infinite linear; 
           }
         }
       }
