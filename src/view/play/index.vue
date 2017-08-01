@@ -1,11 +1,15 @@
 <template>
-  <div class="music">
-    <button class="back" @click="backToUpper">返回</button>
+  <div class="play">
+    <player></player>
   </div>
 </template>
 <script>
+  import Player from './Player'
   export default {
     name: 'play',
+    components: {
+      Player
+    },
     methods: {
       backToUpper () {
         this.$router.go(-1)
@@ -14,7 +18,7 @@
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
-  .music {
+  .play {
     position: absolute;
     top: 0;
     left: 0;
