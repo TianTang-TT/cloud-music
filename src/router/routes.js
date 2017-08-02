@@ -11,14 +11,14 @@ export default [
     path: '/welcome',
     name: 'welcome',
     component: Welcome,
-    meta: { level: 'page' }
+    meta: { level: 'app' }
   },
   {
     path: '/',
     name: 'home',
     component: Home,
     redirect: '/recommend',
-    meta: { level: 'page' },
+    meta: { level: 'app' },
     children: [
       {path: 'recommend', name: 'recommend', component: Recommend, meta: {name: '推荐音乐', index: 1, cat: 'home'}},
       {path: 'hot', name: 'hot', component: Hot, meta: {name: '热歌榜', index: 2, cat: 'home'}},
@@ -29,6 +29,6 @@ export default [
     path: '/play',
     name: 'play',
     component: Play,
-    meta: { level: 'page' }
+    meta: { level: 'app' }
   }
 ]

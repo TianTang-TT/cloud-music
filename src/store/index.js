@@ -5,19 +5,29 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    history: []
+    history: [],
+    operate: ''
   },
   mutations: {
     ADD_HISTORY (state, route) {
       state.history.push(route)
+      state.operate = 'forward'
     },
-    DECREASE_HISTORY (state) {
-      state.history.pop()
+    DECREASE_HISTORY (state, index) {
+      state.history.splice(index)
+      state.operate = 'back'
     }
   },
   actions: {
-    navigate ({ commit, state }, route) {
-      commit('ADD_HISTORY', route)
+    navigate ({ commit, state }, toRoute) {
+      const index = state.history.findIndex(route => {
+        return route.path === toRoute.path
+      })
+      if (index < 0) {
+        return commit('ADD_HISTORY', toRoute)
+      } else {
+        return commit('DECREASE_HISTORY', index)
+      }
     }
   }
 })
