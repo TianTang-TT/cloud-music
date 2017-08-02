@@ -21,11 +21,13 @@ export default {
   },
   watch: {
     $route (to, from) {
+      if (!to.meta.level) return
       if (to.name === 'play' || from.name === 'welcome') {
         this.forward = true
       } else {
         this.forward = false
       }
+      // this.$store.dispatch('navigate', to)
     }
   }
 }
