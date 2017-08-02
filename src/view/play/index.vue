@@ -1,5 +1,6 @@
 <template>
   <div class="play">
+    <span class="back" @click="backToUpper"></span>
     <player></player>
   </div>
 </template>
@@ -27,13 +28,14 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .3);
     .back {
-      width: 200px;
-      height: 100px;
-      border: none;
-      outline: none;
-      border-radius: 10px;
-      background: #d33a31;
-      font-size: 40px;
+      width: 0.533333rem;
+      height: 0.533333rem;
+      border: solid #fff;
+      border-width: 4px 0 0 4px;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 0.266667rem;
+      left: 0.266667rem;
     }
   }
 </style>

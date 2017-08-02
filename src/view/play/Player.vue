@@ -66,7 +66,7 @@
           left: 0;
           background: url('~assets/imgs/disc-plus.png') no-repeat;
           background-size: contain;
-          animation: circling 20s infinite linear; 
+          animation: circling forwards 20s infinite linear; 
         }
         .song {
           width: 4.906667rem;
@@ -80,7 +80,7 @@
           .song-img {
             width: 100%;
             height: 100%;
-            animation: circling 20s infinite linear; 
+            animation: circling forwards 20s infinite linear; 
           }
         }
       }
