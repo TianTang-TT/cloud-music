@@ -25,8 +25,9 @@ export default {
   },
   watch: {
     $route (to, from) {
-      if (to.meta.level !== 'app') return
-      this.$store.dispatch('navigate', to)
+      let toRoute = to.matched[0]
+      if (toRoute.meta.level !== 'app') return
+      this.$store.dispatch('navigate', toRoute)
     }
   }
 }

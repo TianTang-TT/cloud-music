@@ -21,8 +21,11 @@ export default new Vuex.Store({
   actions: {
     navigate ({ commit, state }, toRoute) {
       const index = state.history.findIndex(route => {
+        console.log(`routepath:${route.path}`)
+        console.log(`toRoutePaht:${toRoute.path}`)
         return route.path === toRoute.path
       })
+      console.log(`index: ${index}`)
       if (index < 0) {
         return commit('ADD_HISTORY', toRoute)
       } else {
