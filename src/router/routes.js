@@ -10,8 +10,7 @@ export default [
   {
     path: '/welcome',
     name: 'welcome',
-    component: Welcome,
-    meta: { level: 'app' }
+    component: Welcome
   },
   {
     path: '/',

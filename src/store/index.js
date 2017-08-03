@@ -14,7 +14,7 @@ export default new Vuex.Store({
       state.operate = 'forward'
     },
     DECREASE_HISTORY (state, index) {
-      state.history.splice(index)
+      state.history.splice(index + 1)
       state.operate = 'back'
     }
   },
@@ -28,6 +28,8 @@ export default new Vuex.Store({
       console.log(`index: ${index}`)
       if (index < 0) {
         return commit('ADD_HISTORY', toRoute)
+      } else if (index === state.history.length - 1) {
+        return
       } else {
         return commit('DECREASE_HISTORY', index)
       }
