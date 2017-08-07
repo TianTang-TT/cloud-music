@@ -18,7 +18,7 @@ npm run build
 
 ## 效果
 
-![](http://7xt6mo.com1.z0.glb.clouddn.com/%295HNE@HP_3JN%7DI2QBJSIRD7.png)
+![](http://7xt6mo.com1.z0.glb.clouddn.com/2.gif)
 
 ## 简介
 #### vue + vue-router + vuex
