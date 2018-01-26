@@ -4,12 +4,14 @@
   "description": "仿网易云音乐webapp，用ts + react重构",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config build/webpack.base.conf.js",
-    "start": "npm run dev"
+    "dev": "webpack --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "build": "node build/build.js"
   },
   "author": "Lancer",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   }
 }
