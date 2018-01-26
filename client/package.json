@@ -4,7 +4,8 @@
   "description": "仿网易云音乐webapp，用ts + react重构",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --config build/webpack.base.conf.js",
+    "start": "npm run dev"
   },
   "author": "Lancer",
   "license": "ISC",
