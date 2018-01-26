@@ -1,5 +1,5 @@
 const path = require('path')
-const webpack = require('webpack')
+const config = require('../config')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -8,6 +8,11 @@ function resolve(dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js' //设置context之后路径从context开始计算
+    app: './src/index.js' //设置context之后路径从context开始计算
+  },
+  output: {
+    path: config.build.assetsRoot,
+    filename: '[name].js',
+
   }
 }
