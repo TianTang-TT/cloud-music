@@ -3,7 +3,12 @@ const baseWebpackConfig = require('./webpack.base.conf')
 
 const devWebpackConfig = {
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   }
 }
 
