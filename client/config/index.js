@@ -12,8 +12,10 @@ module.exports = {
     // 服务配置
     host: '0.0.0.0',
     port: 9000,
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     poll: false,
+
+    // 是否全屏显示报错信息
     errorOverlay: true,
 
     // source map

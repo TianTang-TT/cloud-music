@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.18",
+    "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.9",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",

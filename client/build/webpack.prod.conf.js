@@ -32,6 +32,15 @@ const prodWebpackConfig = {
       },
       chunksSortMode: 'dependency'
     }),
+
+    // 将static文件复制到dist目录下
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: config.dev.assetsSubDirectory,
+        ignore: ['.*']
+      }
+    ])
   ]
 }
 
