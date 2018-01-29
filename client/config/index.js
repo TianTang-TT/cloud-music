@@ -20,6 +20,6 @@ module.exports = {
 
     // source map
     devtool: '#source-map',
-    productionSourceMap: false
+    productionSourceMap: true
   }
 }

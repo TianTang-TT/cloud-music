@@ -1,16 +1,23 @@
+const path = require('path')
 const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.conf')
+const config = require('../config')
 
 const prodWebpackConfig = {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
-  plugin: [
+  plugins: [
     // 每次构建之前清除dist文件夹
-    new cleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '../')
     }),
 
