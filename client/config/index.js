@@ -4,12 +4,12 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
+    // paths
+    assetsSubDir: 'static'
   },
   build: {
-    // template for index.html
-
     // paths
-    assetsRoot: path.resolve(__dirname, '../dist')
+    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsSubDir: 'static'
   }
 }
