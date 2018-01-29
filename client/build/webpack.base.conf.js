@@ -13,6 +13,13 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: ['file-loader']
+      }
+    ]
   }
 }

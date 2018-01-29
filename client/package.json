@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-merge": "^4.1.1"
