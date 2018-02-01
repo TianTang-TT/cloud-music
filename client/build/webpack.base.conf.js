@@ -15,8 +15,20 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
   },
+  resolve: {
+    extensions: ['', '.ts', '.tsx', '.js', '.json']
+  },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: ['ts-loader']
+      },
+      {
+        test: /\.js$/,
+        loader: "source-map-loader",
+        enforce: "pre"
+      },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)$/,
         loader: 'file-loader',
