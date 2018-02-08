@@ -1,0 +1,8 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    // ...
+    "rootDir": "src",
+    "outDir": "tsc"
+  }
+}
