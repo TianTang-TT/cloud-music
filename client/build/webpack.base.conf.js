@@ -9,30 +9,29 @@ function resolve(dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/index.js' //设置context之后路径从context开始计算
+    app: './src/index.tsx' //设置context之后路径从context开始计算
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: [".ts", ".tsx", ".js", ".json"]
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader']
+        use: ['awesome-typescript-loader']
       },
-      /*{
+      {
         test: /\.js$/,
         loader: "source-map-loader",
         enforce: "pre"
-      },*/
+      },
       {
         test: /\.jsx?$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
+        use: ['babel-loader']
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)$/,
@@ -59,5 +58,9 @@ module.exports = {
         }
       }
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   }
 }

@@ -1,0 +1,1 @@
+export let tsNumber: number = 100

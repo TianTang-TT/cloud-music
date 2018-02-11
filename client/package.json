@@ -11,6 +11,9 @@
   "author": "Lancer",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^16.0.36",
+    "@types/react-dom": "^16.0.3",
+    "awesome-typescript-loader": "^3.4.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -23,6 +26,7 @@
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.19.1",
     "ts-loader": "^3.4.0",
+    "typescript": "^2.7.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.1"
