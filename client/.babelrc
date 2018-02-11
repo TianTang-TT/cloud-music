@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"],
+          "node": "current"
+        },
+        "debug": true,       // debug，编译的时候 console
+        "useBuiltIns": false // 是否开启自动支持 polyfill
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-react-jsx"    // 支持jsx
+  ]
+}

@@ -24,10 +24,15 @@ module.exports = {
         test: /\.tsx?$/,
         use: ['ts-loader']
       },
-      {
+      /*{
         test: /\.js$/,
         loader: "source-map-loader",
         enforce: "pre"
+      },*/
+      {
+        test: /\.jsx?$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)$/,

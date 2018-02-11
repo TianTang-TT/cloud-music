@@ -1,10 +1,11 @@
-import './index.css'
-function component() {
-  var element = document.createElement('div');
-
-  element.innerHTML = 'hello ddd'
-
-  return element;
+import React from 'react'
+import ReactDom from 'react-dom'
+const test = async function() {
+  let result = await fetch('test')
+  return result
 }
 
-document.body.appendChild(component());
+ReactDom.render(
+  <h1>hello world</h1>,
+  document.querySelector('#app')
+)
