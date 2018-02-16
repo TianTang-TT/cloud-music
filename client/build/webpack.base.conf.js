@@ -16,7 +16,12 @@ module.exports = {
     filename: '[name].js',
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".json"],
+    alias: {
+      src: resolve('src'),
+      components: resolve('src/components'),
+      assets: resolve('src/assets')
+    }
   },
   module: {
     rules: [
