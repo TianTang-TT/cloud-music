@@ -1,1 +1,1 @@
-export let tsNumber: number = 100
+export let tsNumber: number = 200
