@@ -2,9 +2,9 @@ import * as React from 'react'
 import * as ReactDom from 'react-dom'
 import 'assets/scss/index.scss'
 
-import { tsNumber } from "./components/Hello";
+import { Hello } from "./components/Hello";
 
 ReactDom.render(
-    <h1>{ tsNumber }</h1>,
+    <Hello compiler="TypeScript" framework="React" />,
     document.querySelector('#app')
 );
