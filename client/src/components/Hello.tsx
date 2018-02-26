@@ -12,3 +12,19 @@ export class Hello extends React.Component<HelloProps, {}> {
         </h1>;
     }
 }
+
+export class A extends React.Component {
+    render() {
+        return <Hello compiler="component A" framework="React" />
+    }
+}
+export class B extends React.Component {
+    render() {
+        return <Hello compiler="component B" framework="React" />
+    }
+}
+export class C extends React.Component {
+    render() {
+        return <Hello compiler="component C" framework="React" />
+    }
+}
