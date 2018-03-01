@@ -14,16 +14,17 @@ const devWebpackConfig = {
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
               plugins: [
-                require('autoprefixer')()
+                require('autoprefixer')(),
+                require('postcss-px2rem')({remUnit: 75})
               ]
             }
-          }
+          },
+          'sass-loader'
         ]
       }
     ]
