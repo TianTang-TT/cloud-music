@@ -11,10 +11,12 @@
   "author": "Lancer",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.4",
     "awesome-typescript-loader": "^3.4.1",
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
