@@ -11,11 +11,13 @@ import 'assets/scss/mixin.scss'
 import 'assets/scss/index.scss'
 
 import { Welcome } from './view/Welcome'
+import { Home } from './view/home'
 
 ReactDom.render(
     <Router>
         <div className="container">
-            <Route exact path="/" component={Welcome}/>
+            <Route exact path="/welcome" component={Welcome}/>
+            <Route exact path="/" component={Home}/>
         </div>
     </Router>,
     document.querySelector('#app')

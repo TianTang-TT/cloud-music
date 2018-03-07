@@ -1,5 +1,11 @@
 /*welcome*/
 .page-welcome {
-    
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    text-align: center;
+  }
 }
 
