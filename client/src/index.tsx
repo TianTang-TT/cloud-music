@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDom from 'react-dom'
 import {
     BrowserRouter as Router,
-    Route
+    Route,
 } from 'react-router-dom'
 
 import 'reset.css'
@@ -10,14 +10,14 @@ import 'assets/scss/common.scss'
 import 'assets/scss/mixin.scss'
 import 'assets/scss/index.scss'
 
-import { Welcome } from './view/Welcome'
+import Welcome from './view/Welcome'
 import { Home } from './view/home'
 
 ReactDom.render(
     <Router>
         <div className="container">
             <Route exact path="/welcome" component={Welcome}/>
-            <Route exact path="/" component={Home}/>
+            <Route path="/" component={Home}/>
         </div>
     </Router>,
     document.querySelector('#app')
