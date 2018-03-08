@@ -7,9 +7,11 @@ class Welcome extends React.Component<{history: Object[]}, {}> {
     }
 
     render () {
-        return (<div className="page-welcome">
-            <p> 时光时光慢些吧 </p>
-        </div>)
+        return (
+            <div className="page-welcome">
+                <p> 时光时光慢些吧 </p>
+            </div>
+        )
     }
 
     componentDidMount () {

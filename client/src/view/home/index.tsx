@@ -1,7 +1,12 @@
 import * as React from 'react'
+import {homedir} from "os";
 
 export class Home extends React.Component {
     render () {
-        return <p>home</p>
+        return (
+            <div>
+
+            </div>
+        )
     }
 }
