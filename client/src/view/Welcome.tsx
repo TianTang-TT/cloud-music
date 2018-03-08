@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { withRouter } from 'react-router-dom'
 
-class Welcome extends React.Component<any, any> {
+class Welcome extends React.Component<{history: Object[]}, {}> {
     constructor (props:any) {
         super(props)
     }
@@ -15,7 +15,7 @@ class Welcome extends React.Component<any, any> {
     componentDidMount () {
        setTimeout(() => {
            this.props.history.push('');
-       }, 3000)
+       }, 2000)
     }
 }
 
