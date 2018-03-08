@@ -1,4 +1,7 @@
-/*welcome*/
+@import "./common";
+@import "./mixin";
+
+/* welcome */
 .page-welcome {
   height: 100%;
   display: flex;
@@ -9,3 +12,10 @@
   }
 }
 
+/* home */
+.page-home {
+  .cm-header {
+    height: 128px;
+    background-color: $baseColor
+  }
+}

@@ -1,11 +1,11 @@
 import * as React from 'react'
-import {homedir} from "os";
+import { Header } from './Header'
 
 export class Home extends React.Component {
     render () {
         return (
-            <div>
-
+            <div className="page-home">
+                <Header></Header>
             </div>
         )
     }

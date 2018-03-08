@@ -6,8 +6,6 @@ import {
 } from 'react-router-dom'
 
 import 'reset.css'
-import 'assets/scss/common.scss'
-import 'assets/scss/mixin.scss'
 import 'assets/scss/index.scss'
 
 import Welcome from './view/Welcome'
