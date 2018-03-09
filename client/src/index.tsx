@@ -10,7 +10,7 @@ import 'reset.css'
 import 'assets/scss/index.scss'
 
 import Welcome from './view/Welcome'
-import { Home } from './view/home'
+import Home from './view/home'
 
 ReactDom.render(
     <Router>

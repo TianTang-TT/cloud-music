@@ -1,5 +1,5 @@
 import * as React from 'react'
-export class Header extends React.Component<{}, {}> {
+export default class Header extends React.Component<{}, {}> {
     render () {
         return (
             <footer className="cm-header">
