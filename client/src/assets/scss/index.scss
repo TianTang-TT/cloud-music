@@ -16,6 +16,29 @@
 .page-home {
   .cm-header {
     height: 128px;
-    background-color: $baseColor
+    background-color: $baseColor;
+    .wrap {
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      .title {
+        font-size: 50px;
+      }
+      .download {
+        border: 1px solid #fff;
+        border-radius: 30px;
+        .download-text {
+          height: 60px;
+          line-height: 60px;
+          font-size: 30px;
+          display: inline-block;
+          padding: 0 20px;
+        }
+      }
+
+    }
   }
 }
