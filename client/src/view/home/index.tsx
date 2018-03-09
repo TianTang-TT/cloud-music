@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Header from './Header'
-import Nav from './Nav'
+import Content from './Content'
 
 export default class Home extends React.Component {
     render () {
         return (
             <div className="page-home">
                 <Header></Header>
-                <Nav></Nav>
+                <Content></Content>
             </div>
         )
     }
