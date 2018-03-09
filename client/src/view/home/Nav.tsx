@@ -8,7 +8,7 @@ export default class Nav extends React.Component<{}, {}> {
         return (
             <nav className="nav">
                 <li className="nav-link">
-                    <NavLink to="recommend" activeClassName="acitved">推荐音乐</NavLink>
+                    <NavLink to="/recommend" activeClassName="acitved">推荐音乐</NavLink>
                 </li>
                 <li className="nav-link">
                     <NavLink to="/hot" activeClassName="acitved">热歌榜</NavLink>
