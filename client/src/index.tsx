@@ -5,6 +5,7 @@ import {
     Route,
 } from 'react-router-dom'
 
+import 'lib-flexible'
 import 'reset.css'
 import 'assets/scss/index.scss'
 
