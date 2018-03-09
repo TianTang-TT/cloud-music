@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 import 'lib-flexible'
-import 'reset.css'
+import 'normalize.css'
 import 'assets/scss/index.scss'
 
 import Welcome from './view/Welcome'
