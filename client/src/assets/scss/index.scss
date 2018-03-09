@@ -14,8 +14,13 @@
 
 /* home */
 .page-home {
+  height: 100%;
   // header
   .cm-header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     height: 128px;
     background-color: $baseColor;
     .wrap {
@@ -45,7 +50,14 @@
 
   // content
   .cm-content {
+    padding-top: 128px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
     .nav {
+      position: absolute;
+      left: 0;
+      width: 100%;
       height: 80px;
       overflow: hidden;
       border-bottom: 1px solid #ccc;
@@ -70,6 +82,10 @@
           }
         }
       }
+    }
+    .content-wrap {
+      padding-top: 80px;
+      height: 100%;
     }
   }
 }

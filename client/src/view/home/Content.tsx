@@ -6,6 +6,9 @@ export default class Content extends React.Component<{}, {}> {
         return (
             <div className="cm-content">
                 <Nav></Nav>
+                <div className="content-wrap">
+
+                </div>
             </div>
         )
     }
