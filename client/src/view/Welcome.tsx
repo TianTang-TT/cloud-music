@@ -1,7 +1,11 @@
 import * as React from 'react'
 import { withRouter } from 'react-router-dom'
 
-class Welcome extends React.Component<{history: Object[]}, {}> {
+interface WelcompProps {
+    history: Array<Object>
+}
+
+class Welcome extends React.Component<WelcompProps, {}> {
     constructor (props:any) {
         super(props)
     }
