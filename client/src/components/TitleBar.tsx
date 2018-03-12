@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-export default class TitleBar extends React.Component <{}, {}> {
+interface TitleBarProps {
+    title: string
+}
+
+export default class TitleBar extends React.Component <TitleBarProps, {}> {
     render () {
         <h2 className="title-bar">
             { this.props.title }
