@@ -4,10 +4,17 @@ interface TitleBarProps {
     title: string
 }
 
-export default class TitleBar extends React.Component <TitleBarProps, {}> {
+export default class TitleBar extends React.Component<TitleBarProps, {}> {
+    
+    constructor (props:TitleBarProps ) {
+        super(props)
+    }
+
     render () {
-        <h2 className="title-bar">
-            { this.props.title }
-        </h2>
+        return (
+            <h2 className="title-bar">
+                { this.props.title }
+            </h2>
+        )
     }
 }
