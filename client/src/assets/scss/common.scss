@@ -6,3 +6,21 @@ html, body, #app {
 }
 
 $baseColor: #d43c33;
+
+/* title bar */
+.title-bar {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 28px;
+  font-size: 34px;
+  height: 40px;
+  line-height: 40px;
+  &:after {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: -18px;
+    top: 0;
+  }
+}
