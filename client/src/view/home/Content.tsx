@@ -16,7 +16,7 @@ export default class Content extends React.Component<{}, {}> {
                 <div className="cm-content">
                     <Nav></Nav>
                     <div className="content-wrap">
-                        <Route path="/" exact component={ Recommend }></Route>
+                        <Route path="/" component={ Recommend }></Route>
                         <Route path="/hot" component={ Hot }></Route>
                         <Route path="/search" component={ Search }></Route>
                     </div>
