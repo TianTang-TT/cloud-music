@@ -11,6 +11,7 @@ $baseColor: #d43c33;
 .title-bar {
   position: relative;
   padding-left: 18px;
+  margin-top: 0;
   margin-bottom: 28px;
   font-size: 34px;
   height: 40px;
@@ -19,8 +20,9 @@ $baseColor: #d43c33;
     content: '';
     width: 4px;
     height: 100%;
+    background-color: $baseColor;
     position: absolute;
-    left: -18px;
+    left: 0;
     top: 0;
   }
 }
