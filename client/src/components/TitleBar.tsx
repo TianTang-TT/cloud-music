@@ -5,7 +5,7 @@ interface TitleBarProps {
 }
 
 export default class TitleBar extends React.Component<TitleBarProps, {}> {
-    
+
     constructor (props:TitleBarProps ) {
         super(props)
     }
