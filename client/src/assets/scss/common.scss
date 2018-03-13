@@ -7,6 +7,10 @@ html, body, #app {
 
 $baseColor: #d43c33;
 
+/* reset some style */
+p {
+  margin: 0;
+}
 /* title bar */
 .title-bar {
   position: relative;
