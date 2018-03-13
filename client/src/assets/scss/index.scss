@@ -90,5 +90,39 @@
   }
   .recommend {
     padding-top: 40px;
+    .remd_songs {
+      .remd_ul {
+        margin: 0 -2px;
+        padding-bottom: 32px;
+        overflow: hidden;
+        .remd_li {
+          float: left;
+          float: left;
+          width: 33.33%;
+          .remd_song {
+            box-sizing: border-box;
+            margin: 0 2px;
+            .song_wrap {
+              width: 100%;
+              padding-bottom: 100%;
+              position: relative;
+              .song_img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+              }
+              .remd_lnum {
+                position: absolute;
+                top: 4px;
+                right: 10px;
+              }
+            }
+          }
+        }
+
+      }
+    }
   }
 }
