@@ -5,7 +5,7 @@ const service = axios.create({
     baseURL: '',
     timeout: 5000
 })
-
+// 模拟网易云音乐接口请求
 service.interceptors.request.use(option => {
     return option
 }, error => Promise.reject(error))
