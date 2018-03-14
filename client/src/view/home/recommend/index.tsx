@@ -1,6 +1,9 @@
 import * as React from 'react'
 import TitleBar from '../../../components/TitleBar'
 import RemdSong from './RemdSong'
+
+import { login } from '../../../api/common'
+
 export default class Recommend extends React.Component<{}, {}> {
     constructor (props: any) {
         super (props)
@@ -25,5 +28,11 @@ export default class Recommend extends React.Component<{}, {}> {
                 </div>
             </div>
         )
+    }
+
+    componentDidMount () {
+        login('', '').then((res: {}) => {
+            console.log(res)
+        })
     }
 }

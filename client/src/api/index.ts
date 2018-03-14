@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-    baseURL: '',
+    baseURL: 'http://localhost:3000',
     timeout: 5000
 })
 // 模拟网易云音乐接口请求
@@ -13,3 +13,5 @@ service.interceptors.request.use(option => {
 service.interceptors.response.use(response => {
     return response
 }, error => Promise.reject(error))
+
+export default service
