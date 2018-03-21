@@ -10,12 +10,14 @@ import 'normalize.css'
 import 'assets/scss/index.scss'
 
 import Welcome from './view/Welcome'
+import Login from './view/Login'
 import Home from './view/home'
 
 ReactDom.render(
     <Router>
         <div className="container">
-            <Route exact path="/welcome" component={Welcome}/>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/welcome" component={Welcome}/>
             <Route path="/" component={Home}/>
         </div>
     </Router>,
